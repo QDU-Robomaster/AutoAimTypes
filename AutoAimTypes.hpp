@@ -125,11 +125,15 @@ struct DetectedFrame
   std::vector<Armor> armors;
 };
 
-/// lightbar4 物体点（暂定值，比赛前用测距数据校验）：半宽、半高，米。
-/// lightbar4 object points (provisional): half width and half height in metres.
-inline constexpr double SMALL_ARMOR_HALF_WIDTH = 0.0649;
-inline constexpr double LARGE_ARMOR_HALF_WIDTH = 0.1124;
-inline constexpr double ARMOR_HALF_HEIGHT = 0.0278;
+/// lightbar4 物体点：半宽、半高，米。按 v4 模型的角点位置用测距集（2–6 m 正对）拟合；
+/// 换检测模型要重新拟合。大板没有实测，按小板外扩量 +1.4 mm 推算。
+///
+/// lightbar4 object points: half width and half height in metres, fitted to where
+/// the v4 model puts the corners on the range set (2–6 m, facing); refit for another
+/// detector model. The large plate is not measured: small-plate bloom +1.4 mm.
+inline constexpr double SMALL_ARMOR_HALF_WIDTH = 0.0663;
+inline constexpr double LARGE_ARMOR_HALF_WIDTH = 0.1138;
+inline constexpr double ARMOR_HALF_HEIGHT = 0.0283;
 }  // namespace AutoAim
 
 /**
