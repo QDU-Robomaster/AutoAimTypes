@@ -1,6 +1,6 @@
 # AutoAimTypes
 
-自瞄链路公共类型：逐层帧、装甲板、IMU 样本与 Topic 查找 / Shared auto-aim types: stage frames, armors, IMU samples and Topic lookup
+自瞄链路公共类型：逐层帧、装甲板、IMU 样本与 Topic 查找 / Shared auto-aim types for stage frames, armors, IMU samples and Topic lookup
 
 ## 1. 模块作用 / Purpose
 

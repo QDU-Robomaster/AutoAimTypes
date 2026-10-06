@@ -2,7 +2,7 @@
 
 // clang-format off
 /* === MODULE MANIFEST V2 ===
-module_description: 自瞄链路公共类型：逐层帧、装甲板、IMU 样本与 Topic 查找 / Shared auto-aim types: stage frames, armors, IMU samples and Topic lookup
+module_description: 自瞄链路公共类型：逐层帧、装甲板、IMU 样本与 Topic 查找 / Shared auto-aim types for stage frames, armors, IMU samples and Topic lookup
 depends:
 - id: QDU-Robomaster/CameraBase
   ref: same-or-dev
