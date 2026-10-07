@@ -29,11 +29,11 @@ The four `Armor` corners are the light-bar end points (lightbar4) in the order t
 
 - `RequireTopic<Payload>(name)`：查找已存在的 Topic 并校验载荷类型，找不到即致命退出。消费者用它接线，生产者用 `LibXR::Topic::CreateTopic` 创建；按 YAML 顺序，生产者先于消费者构造。
 - `ShouldLog(count)`：限频日志，前 5 次与此后每 100 次返回 true。
-- lightbar4 物体点常量：小板半宽 66.3 mm、大板半宽 113.8 mm、半高 28.3 mm。按 v4 模型的角点位置用测距集拟合，换检测模型要重新拟合；大板未实测，由小板外扩量推算。
+- lightbar4 物体点常量：小板半宽 66.9 mm、大板半宽 114.4 mm、半高 29.3 mm。按 v7 模型的角点位置用测距集拟合，换检测模型要重新拟合；大板未实测，由小板外扩量推算。
 
 - `RequireTopic<Payload>(name)`: finds an existing Topic and checks its payload type; a missing Topic is fatal. Consumers wire up with it and producers create Topics with `LibXR::Topic::CreateTopic`; following the YAML order, producers are constructed before consumers.
 - `ShouldLog(count)`: rate limiting for logs, true for the first 5 calls and every 100th after that.
-- lightbar4 object point constants: small plate half width 66.3 mm, large plate half width 113.8 mm, half height 28.3 mm, fitted to where the v4 model puts the corners on the range set; refit for another detector model. The large plate is not measured and follows the small plate's bloom.
+- lightbar4 object point constants: small plate half width 66.9 mm, large plate half width 114.4 mm, half height 29.3 mm, fitted to where the v7 model puts the corners on the range set; refit for another detector model. The large plate is not measured and follows the small plate's bloom.
 
 ## 4. 依赖 / Dependencies
 

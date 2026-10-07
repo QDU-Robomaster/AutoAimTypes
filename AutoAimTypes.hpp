@@ -67,6 +67,8 @@ enum class ArmorColor : uint8_t
   RED = 0,
   BLUE = 1,
   UNKNOWN = 2,
+  PURPLE = 3,  ///< 紫色灯条，不是目标 / Purple light bars, not a target
+  OFF = 4,     ///< 灯条熄灭（受击闪烁或阵亡）/ Light bars off (hit flash or destroyed)
 };
 
 enum class ArmorType : uint8_t
@@ -125,15 +127,15 @@ struct DetectedFrame
   std::vector<Armor> armors;
 };
 
-/// lightbar4 物体点：半宽、半高，米。按 v4 模型的角点位置用测距集（2–6 m 正对）拟合；
-/// 换检测模型要重新拟合。大板没有实测，按小板外扩量 +1.4 mm 推算。
+/// lightbar4 物体点：半宽、半高，米。按 v7 模型的角点位置用测距集（2–6 m 正对）拟合；
+/// 换检测模型要重新拟合。大板没有实测，按小板外扩量 +2.0 mm 推算。
 ///
 /// lightbar4 object points: half width and half height in metres, fitted to where
-/// the v4 model puts the corners on the range set (2–6 m, facing); refit for another
-/// detector model. The large plate is not measured: small-plate bloom +1.4 mm.
-inline constexpr double SMALL_ARMOR_HALF_WIDTH = 0.0663;
-inline constexpr double LARGE_ARMOR_HALF_WIDTH = 0.1138;
-inline constexpr double ARMOR_HALF_HEIGHT = 0.0283;
+/// the v7 model puts the corners on the range set (2–6 m, facing); refit for another
+/// detector model. The large plate is not measured: small-plate bloom +2.0 mm.
+inline constexpr double SMALL_ARMOR_HALF_WIDTH = 0.0669;
+inline constexpr double LARGE_ARMOR_HALF_WIDTH = 0.1144;
+inline constexpr double ARMOR_HALF_HEIGHT = 0.0293;
 }  // namespace AutoAim
 
 /**
